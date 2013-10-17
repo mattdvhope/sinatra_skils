@@ -1,6 +1,8 @@
 get '/' do
   # render home page
-  @users = User.all
+  # @users = User.all
+  @user = User.create(:name = params[:name])
+  @skill = Skill.create(:name = params[:name])
 
   erb :index
 end
